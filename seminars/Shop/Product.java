@@ -1,9 +1,13 @@
 package seminars.Shop;
 
 public class Product {
+
     private Integer cost; // Стоимость продукта
     private String title; // Название
-
+    public Product(Integer cost, String title) {
+        this.cost = cost;
+        this.title = title;
+    }
     // Геттеры, сеттеры:
     public int getCost() {
         return cost;
@@ -19,5 +23,10 @@ public class Product {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s по цене %d руб.", title, cost);
     }
 }
